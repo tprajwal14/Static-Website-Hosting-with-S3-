@@ -93,3 +93,10 @@ Copy the CloudFront DNS name (example):
 ├── error.html
 ├── style.css
 └── script.js
+
+/my-static-website/
+│
+├── index.html
+├── error.html
+├── style.css
+└── script.js
