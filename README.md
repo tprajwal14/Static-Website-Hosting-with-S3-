@@ -79,6 +79,3 @@ folder_structure:
     - style.css
     - script.js
 
-references:
-  - "AWS S3 Static Website Hosting Docs: https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html"
-  - "AWS CloudFront Documentation: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
