@@ -43,13 +43,13 @@ Generate and attach the following **Bucket Policy** to make the objects publicly
   ]
 }
 
-4️⃣ Enable Static Website Hosting
-Go to Properties of the S3 bucket.
-Scroll to Static website hosting.
-Enable it and provide the following:
+4️⃣ Enable Static Website Hosting on S3
+Go to your S3 Bucket and navigate to Properties.
+Scroll down to Static website hosting and enable it.
+Provide the following details:
 Index document: index.html
 Error document: error.html
-📎 Copy the Endpoint URL and test it in your browser!
+📎 Copy the Endpoint URL and test it in your browser
     http://my-static-website-bucket-prajwal.s3-website-us-east-1.amazonaws.com
 
 5️⃣ Create a CloudFront Distribution
