@@ -51,6 +51,7 @@ Index document: index.html
 Error document: error.html
 📎 Copy the Endpoint URL and test it in your browser!
     http://my-static-website-bucket-prajwal.s3-website-us-east-1.amazonaws.com
+
 5️⃣ Create a CloudFront Distribution
 Create a CloudFront distribution to serve your website globally with low latency.
 Origin Domain: Use your S3 bucket as the origin.
