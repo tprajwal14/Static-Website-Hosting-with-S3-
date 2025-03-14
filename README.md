@@ -42,7 +42,7 @@ Generate and attach the following **Bucket Policy** to make the objects publicly
     }
   ]
 }
-4️⃣ Enable Static Website Hosting on S3
+4️ Enable Static Website Hosting on S3
 1.	Go to your S3 bucket and navigate to Properties.
 2.	Scroll down to Static Website Hosting and enable it.
 3.	Provide the following details: 
@@ -50,51 +50,3 @@ o	Index document: index.html
 o	Error document: error.html
 4.	📎 Copy the Endpoint URL and test it in your browser: 
 o	http://my-static-website-bucket-prajwal.s3-website-us-east-1.amazonaws.com
-________________________________________
-5️⃣ Create a CloudFront Distribution
-•	Create a CloudFront distribution to serve your website globally with low latency.
-•	Set Origin Domain to your S3 bucket.
-•	Configure the Default Root Object as index.html.
-________________________________________
-6️⃣ Attach CloudFront Bucket Policy (Restrict Access via CloudFront Only)
-Apply the following Bucket Policy to allow CloudFront access only:
-json
-CopyEdit
-{
-  "Version": "2008-10-17",
-  "Id": "PolicyForCloudFrontPrivateContent",
-  "Statement": [
-    {
-      "Sid": "AllowCloudFrontServicePrincipal",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "cloudfront.amazonaws.com"
-      },
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::my-static-website-bucket-prajwal/*",
-      "Condition": {
-        "StringEquals": {
-          "AWS:SourceArn": "arn:aws:cloudfront::084828597822:distribution/EFJI44KVSOKT4"
-        }
-      }
-    }
-  ]
-}
-________________________________________
-7️⃣ Access Your Website via CloudFront
-•	Copy the CloudFront DNS name (example):
-text
-CopyEdit
-https://d2w33ifxgmdy45.cloudfront.net/index.html
-•	Paste it in your browser to access your static website hosted through CloudFront! 🚀
-________________________________________
-📂 Folder Structure
-bash
-CopyEdit
-/my-static-website/
-│
-├── index.html
-├── error.html
-├── style.css
-└── script.js
-
