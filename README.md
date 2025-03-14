@@ -87,10 +87,9 @@ Copy the CloudFront DNS name (example):
     https://d2w33ifxgmdy45.cloudfront.net/index.html
 
 
-/:my-static-website-bucket-prajwal/
+/my-static-website/
 │
 ├── index.html
 ├── error.html
 ├── style.css
 └── script.js
-
