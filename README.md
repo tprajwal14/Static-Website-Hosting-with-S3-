@@ -44,6 +44,7 @@ Generate and attach the following **Bucket Policy** to make the objects publicly
 }
 
 4️⃣ Enable Static Website Hosting on S3
+
 Go to your S3 Bucket and navigate to Properties.
 Scroll down to Static website hosting and enable it.
 Provide the following details:
@@ -53,11 +54,13 @@ Error document: error.html
     http://my-static-website-bucket-prajwal.s3-website-us-east-1.amazonaws.com
 
 5️⃣ Create a CloudFront Distribution
+
 Create a CloudFront distribution to serve your website globally with low latency.
 Origin Domain: Use your S3 bucket as the origin.
 Configure Default Root Object as index.html.
 
 6️⃣ Attach CloudFront Bucket Policy (Restrict Access via CloudFront Only)
+
 Apply this Bucket Policy to allow CloudFront only access:
     {
   "Version": "2008-10-17",
